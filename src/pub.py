@@ -9,3 +9,4 @@ class Pub:
         self.till += amount
 
   
+  

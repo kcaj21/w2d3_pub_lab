@@ -28,5 +28,6 @@ class Customer:
     #         self.drunkeness += strength
     #     elif self.drunkeness > 10:
     #         print("You're too drunk")
+    
         
     

@@ -42,12 +42,14 @@ class TestPub(unittest.TestCase):
 
     def test_customer_can_buy_drink(self):
         self.customer.check_customer_age(21)
-        while self.customer.drunkeness <= 10:
+        if self.customer.drunkeness <= 10:
             self.drink.get_drink_price(self.drink.price)
             self.customer.reduce_wallet_amount(self.customer.wallet)
             self.pub.increase_till(self.drink.price)
-            self.customer.drunkeness.add_drunkeness(self.drink.strength)
-        if self.customer.drunkeness > 10:
-            break
+            self.customer.add_drunkeness(self.drink.strength)
+        else:
+            print ("you're steamin mun")
+        
 
     # [ {"drink": "beer", "price": 5.00}, {"drink": "wine", "price": 4.00} ])
+    
